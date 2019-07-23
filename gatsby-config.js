@@ -2,10 +2,10 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter MDX Basic',
+    title: 'Markdown App',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@chrisbiscardi',
+      '',
+    author: '',
   },
   plugins: [
     {
@@ -14,7 +14,9 @@ module.exports = {
         defaultLayouts: { default: path.resolve('./src/components/layout.js') },
       },
     },
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-react-helmet',
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,22 +31,31 @@ module.exports = {
         path: `${__dirname}/src/pages`
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-transformer-sharp',
+    },
+    {
+      resolve:'gatsby-plugin-sharp',
+    },
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-default-mdx-basic',
-        short_name: 'starter',
+        name: 'Markdown application with firebase',
+        short_name: 'Markdown app',
+        description: `The application does cool things and makes your life better.`,
         start_url: '/',
+        lang: `en`,
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }

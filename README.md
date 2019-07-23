@@ -1,27 +1,28 @@
-# Gatsby Starter MDX Basic
+# Gatsby Markdown Application
 
-View this starter [live on Netlify](https://gatsby-starter-mdx-basic.netlify.com/)
+modifyied from gatsby-mdx starter
 
-This starter build MDX support into the
-[gatsby-default-starter](https://github.com/gatsbyjs/gatsby-starter-default). Its
-README also applies here.
+## MDX plugin
 
-1. Create a new Gatsby site using this starter
+`MDX` is for directly converting markdown syntax into react component, so that you can use markdown and JSX interchangeably, not much use for this project here...
 
-```sh
-gatsby new my-site https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic
+## Draft.js
+
+```shell
+yarn add draft-js
 ```
 
-2. Install dependencies
+## MD & draft conversion/parser
 
-```sh
-yarn
+```shell
+yarn add markdown-draft-js
+# dependency: remarkable
 ```
 
-3. Run the develop script
+[remarkable](https://github.com/jonschlinkert/remarkable) markdown [strict CommonMark mode](https://commonmark.org/help/)
 
-```sh
-yarn develop
+## emotion.js (optional)
+
+```shell
+yarn add gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
-
-4. Edit Page 2 in `src/pages/page-2.mdx`

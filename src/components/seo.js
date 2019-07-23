@@ -50,6 +50,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 name: 'twitter:description',
                 content: metaDescription,
               },
+              { name: 'charset', content: 'utf-8' }
             ]
               .concat(
                 keywords.length > 0
